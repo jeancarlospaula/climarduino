@@ -1,0 +1,20 @@
+{
+  "name": "climarduino",
+  "version": "1.0.0",
+  "description": "Bot para consultar previsão do tempo e mostrar em um display LCD do Arduino",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["bot", "iot", "arduino"],
+  "author": "Jean Carlos de Paula",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.1",
+    "dotenv": "^16.3.1",
+    "johnny-five": "^2.1.0",
+    "lcd-scrolling": "^1.0.2",
+    "remove-accents": "^0.5.0",
+    "telegraf": "^4.15.0"
+  }
+}
