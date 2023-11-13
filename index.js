@@ -61,7 +61,6 @@ board.on("ready", function () {
 
       ctx.reply(`Previsão do tempo para ${message} já está aparecendo no display, ${user}!`);
 
-
       setInterval(() => {
         isProcessingLastMessage = false
         lcd.cursor(0, 0).print("Envie uma cidade")
