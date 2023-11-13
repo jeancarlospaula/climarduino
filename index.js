@@ -43,9 +43,12 @@ board.on("ready", function () {
 
     try {
       if (isProcessingLastMessage) {
+        console.log('Mensagem ainda em processamento')
         ctx.reply(`Aguarde alguns segundos para enviar uma nova cidade, ${user}!`);
         return
       }
+
+      isProcessingLastMessage = true
 
       const response = await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${message}?unitGroup=metric&key=${process.env.API_TOKEN}&contentType=json`)
 
@@ -58,7 +61,6 @@ board.on("ready", function () {
 
       ctx.reply(`Previsão do tempo para ${message} já está aparecendo no display, ${user}!`);
 
-      isProcessingLastMessage = true
 
       setInterval(() => {
         isProcessingLastMessage = false
